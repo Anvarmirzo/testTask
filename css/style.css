@@ -1,0 +1,817 @@
+@import '../fonts/avenir/stylesheet.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir Next Cyr';
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.active {
+    position: relative;
+}
+
+.active-menu {
+    display: flex !important;
+}
+
+.lazy-load {
+    display: none;
+    z-index: -1;
+    position: absolute;
+    width: 150px;
+    height: 98px;
+    right: -50px;
+    top: -21px;
+}
+
+.dot.active::after {
+    position: absolute;
+    background-color: #000000;
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    bottom: -24.5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.active::after {
+    position: absolute;
+    background-color: #4793FF;
+    content: '';
+    width: 44.25px;
+    height: 2px;
+    bottom: -24.5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header {
+    padding-top: 33px;
+    margin-bottom: 41px;
+}
+
+.header-nav {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    font-size: 16px;
+    line-height: 22px;
+    color: #071F44;
+    font-weight: 700;
+    background-color: #fff;
+}
+
+.header-nav--flex {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo-wrapper {
+    flex: 1 1 30%;
+    margin-bottom: -6px;
+}
+
+.nav-hide-menu--flex {
+    display: flex;
+    flex: 1 1 70%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.nav-button {
+    padding: 12.47px 21.42px;
+    border: 2px solid #071F44;
+    border-radius: 7px;
+    margin-right: 9.7px;
+    margin-left: 9.7px;
+}
+
+.nav-button.sign-up {
+    background-color: #4793FF;
+    border-color: #4793FF;
+    color: #fff;
+    font-weight: 400;
+}
+
+.nav-dropdown {
+    margin-left: 18.99px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.nav-lang .fa {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    padding-top: 25px;
+    padding-left: 25px;
+    margin-left: -25px;
+    display: none;
+    padding-bottom: 30px;
+    text-align: left;
+    width: 72px;
+}
+
+.nav-lang {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s all;
+}
+
+.nav-middle__link {
+    margin-right: 17.585px;
+    margin-left: 17.585px;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
+}
+
+.nav-burger-wrapper {
+    display: none;
+    margin-bottom: 5px;
+
+}
+
+.nav-burger-wrapper i {
+    margin-left: 7.8px;
+}
+
+.header-content-wrapper {
+    padding-top: 70px;
+}
+
+.header-content {
+    margin-top: 45px;
+    padding-left: 41px;
+    color: #071F44;
+
+}
+
+.header-content h2 {
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: 0.0857143px;
+    font-weight: 800;
+    margin-bottom: 56px;
+}
+
+.header-content p {
+    font-size: 22px;
+    line-height: 164%;
+    letter-spacing: 0.133333px;
+    mix-blend-mode: normal;
+    opacity: 0.79;
+    margin-bottom: 42px;
+    margin-left: 25px;
+}
+
+.header-content a {
+    color: #ffffff;
+    background-color: #4793FF;
+    padding: 16px 27px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 5.7px;
+    margin-left: 25px;
+}
+
+.header-image-wrapper {
+    position: relative;
+    padding-right: 35px;
+}
+
+.header__img {
+    width: 100%;
+}
+
+.header__img--absolute {
+    position: absolute;
+    right: 39px;
+    bottom: -15px;
+    width: 100%;
+}
+
+@media (max-width:1199.98px) {
+    .header__img--absolute {
+        right: 39px;
+        bottom: 13px;
+        width: 90%;
+    }
+
+    .nav-button,
+    .nav-middle__link {
+        margin-right: 5.7px;
+        margin-left: 5.7px;
+    }
+}
+
+@media (max-width:991.98px) {
+    .nav-logo-wrapper {
+        display: flex;
+        flex: 0;
+    }
+
+    .nav-hide-menu--flex {
+        display: flex;
+    }
+
+    .header__img--absolute {
+        bottom: 0px;
+        top: 141px;
+    }
+
+    .header-content h2 {
+        font-size: 20px;
+        margin-bottom: 26px;
+    }
+
+    .header-content p {
+        font-size: 18px;
+        margin-bottom: 36px;
+    }
+
+    .header-content a {
+        font-size: 14.04px;
+    }
+
+}
+
+@media (max-width:767.98px) {
+    .nav-burger-wrapper span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 22;
+    }
+
+    .icon-close {
+        display: none;
+    }
+
+    .nav-hide-menu {
+        background-color: rgba(255, 255, 255, 0.95);
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    .active::after {
+        bottom: -16.5px;
+    }
+
+    .nav-middle {
+        display: flex;
+        flex-direction: column;
+        margin-top: 94px;
+        position: relative;
+    }
+
+    .nav-middle__link {
+        margin-bottom: 24px;
+    }
+
+    .nav-middle::after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 206px;
+        background-color: #071F44;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-buttons-wrapper {
+        flex-direction: column;
+        margin-top: 38px;
+    }
+
+    .nav-button {
+        margin-bottom: 28px;
+    }
+
+    .burger-text {
+        font-style: normal;
+    }
+
+    .burger-text.swipe {
+        position: absolute;
+        left: 99px;
+    }
+
+    .line.line-active {
+        position: fixed;
+        content: '';
+        height: 1px;
+        background-color: rgba(12, 12, 12, 0.126284);
+        ;
+        width: 100%;
+        top: 63px;
+        z-index: 44;
+    }
+
+    .nav-burger-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+    }
+
+    .nav-burger-wrapper:focus {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+    }
+
+    .header-content-wrapper {
+        padding-top: 76px;
+    }
+
+    .header-nav--flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-content {
+        margin-top: 0;
+        margin-bottom: 44px;
+        text-align: center;
+    }
+
+    .header__img--absolute {
+        top: auto;
+        bottom: 0px;
+    }
+}
+
+@media (max-width:575.98px) {
+    .burger-text.swipe {
+        left: 15px;
+    }
+
+    .header-image-wrapper {
+        padding: 0;
+    }
+
+    .header__img--absolute {
+        width: 100%;
+        bottom: -3px;
+        right: 0;
+    }
+}
+
+@media (max-width:360.98px) {
+    .header__img--absolute {
+        right: 39px;
+        bottom: 13px;
+        width: 90%;
+    }
+}
+
+.gps-tours {
+    padding-bottom: 40px;
+}
+
+.gps-tours__title {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 32px;
+}
+
+.gps-tours__title h2 {
+    color: #071F44;
+    font-size: 32px;
+    letter-spacing: 0.133333px;
+    line-height: 150%;
+    margin-bottom: 47px;
+    position: relative;
+}
+
+.gps-tours__title h2::after {
+    position: absolute;
+    background-color: #4793FF;
+    content: '';
+    width: 106px;
+    height: 2px;
+    bottom: -13.5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gps-tours__title p {
+    font-size: 24px;
+    line-height: 125%;
+    text-align: center;
+    color: #96A5B7;
+}
+
+.gps-tours-card {
+    background-color: rgba(196, 196, 196, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 9px 11px 9px;
+    min-height: 279.25px;
+}
+
+.gps-tours-card__icon {
+    background-color: rgba(149, 193, 255, 0.119946);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 21px;
+}
+
+.gps-tours-card__title {
+    font-size: 17px;
+    line-height: 132%;
+    color: #071F44;
+}
+
+.gps-tours-card__title h3 {
+    margin-bottom: 10px;
+}
+
+
+.card-desk {
+    justify-content: space-around;
+}
+
+.gps-bg-wrapper {
+    margin-top: 6px;
+}
+
+.gps-bg-wrapper img {
+    width: 100%;
+}
+
+@media (max-width:767.98px) {
+    .gps-tours-card {
+        background-color: #fff;
+        min-height: auto;
+    }
+}
+
+@media (max-width:575.98px) {
+    .gps-tours__title h2 {
+        font-size: 28.8px;
+    }
+
+    .gps-tours__title h2::after {
+        width: 53px;
+        height: 1px;
+    }
+
+    .gps-tours__title p {
+        font-size: 18px;
+    }
+
+    .gps-tours-card__title h3 {
+        font-size: 16px;
+    }
+}
+
+.download__title {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 32px;
+}
+
+.download__title h2 {
+    color: #071F44;
+    font-size: 32px;
+    letter-spacing: 0.133333px;
+    line-height: 150%;
+    margin-bottom: 47px;
+    font-weight: 800;
+    position: relative;
+}
+
+.download__title h2::after {
+    position: absolute;
+    background-color: #4793FF;
+    content: '';
+    width: 106px;
+    height: 2px;
+    bottom: -13.5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.download--flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download__phones {
+    width: 100%;
+}
+
+.download-text-wrapper h3 {
+    padding-right: 3px;
+    font-size: 28px;
+    line-height: 150%;
+    font-weight: 800;
+    color: #071F44;
+    margin-bottom: 16px;
+}
+
+.download-text-wrapper p {
+    font-size: 14px;
+    line-height: 150%;
+    color: #BAC5D1;
+    margin-bottom: 16px;
+    padding-right: 107px;
+}
+
+.download-btns-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.download-btns-wrapper img {
+    width: 100%;
+}
+
+@media (max-width: 991.98px) {
+    .download-btns-wrapper {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .download-text-wrapper {
+        text-align: center;
+    }
+
+    .download-text-wrapper h3,
+    .download-text-wrapper p {
+        padding: 0;
+    }
+
+    .download-btns-wrapper {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .download-btns-wrapper {
+        flex-direction: column;
+    }
+
+    .download-btns-wrapper img:nth-child(2) {
+        margin-top: -20px;
+    }
+}
+
+.form {
+    padding: 82.5px 0 130.25px;
+}
+
+.form--flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-text p {
+    font-size: 16px;
+    line-height: 141%;
+    letter-spacing: 0.0642857px;
+    color: #071F44;
+    padding-left: 117px;
+}
+
+.mail-input::placeholder {
+    color: #BAC5D1;
+}
+
+.mail-input {
+    padding: 14.25px 16.5px 15.75px 16.5px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.375px;
+    text-transform: uppercase;
+    color: #BAC5D1;
+    border: 1.125px solid #257BF4;
+    border-radius: 1.5px;
+    width: 320px;
+    font-weight: 700;
+}
+
+.mail-input:focus,
+.send-btn:focus {
+    outline: none;
+}
+
+.send-btn {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.375px;
+    color: #4793FF;
+    border: 0;
+    background-color: transparent;
+    margin-left: 16.75px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.send-btn:hover {
+    cursor: pointer;
+}
+
+@media (max-width:1199.98px) {
+    .mail-input {
+        width: 294px;
+    }
+    .lazy-load {
+        right: -86px;
+        top: -24px;
+    }
+}
+
+@media (max-width:991.98px) {
+    .form-text p {
+        padding-left: 0px;
+    }
+
+    .mail-input {
+        width: 198px;
+    }
+}
+
+@media (max-width:767.98px) {
+    .form--flex {
+        flex-direction: column;
+    }
+
+    .form-text {
+        text-align: center;
+        margin-bottom: 28.8px;
+    }
+
+    .form-input-wrapper {
+        text-align: center;
+        position: relative;
+    }
+
+    .mail-input {
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 23.67px;
+    }
+    .lazy-load {
+        transform: translateX(55%);
+        right: 50%;
+        top: 80px;
+    }
+}
+
+@media (max-width:575.98px) {
+    .mail-input {
+        width: 100%;
+    }
+
+    .send-btn {
+        font-size: 21.6px;
+    }
+}
+
+.footer {
+    padding-top: 57.57px;
+    padding-bottom: 40.25px;
+    background-color: #257BF4;
+    color: #fff;
+}
+
+.footer--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26.47px;
+}
+
+.footer-logo--flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-middle-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-middle-menu a {
+    margin-right: 69.75px;
+}
+
+.footer-middle-menu a:last-child {
+    margin-right: 0px;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-icons a {
+    margin-right: 24px;
+}
+
+.footer-icons a:last-child {
+    margin-right: 0px;
+}
+
+.copy {
+    text-align: center;
+    font-size: 14px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.390079);
+}
+
+@media (max-width:767.98px) {
+    .footer-middle-menu a {
+        margin-right: 18.75px;
+    }
+}
+
+@media (max-width:575.98px) {
+    .footer {
+        padding-top: 45.37px;
+        padding-bottom: 45.37px;
+    }
+
+    .footer--flex {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 43.2px;
+    }
+
+    .footer-logo-wrapper {
+        margin-bottom: 36px;
+    }
+
+    .footer-middle-menu {
+        margin-bottom: 42px;
+        flex-direction: column;
+    }
+
+    .footer-middle-menu a {
+        margin: 0;
+        margin-bottom: 28px;
+    }
+
+    .footer-middle-menu a:last-child {
+        margin: 0;
+    }
+}
