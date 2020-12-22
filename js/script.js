@@ -61,6 +61,7 @@ $(document).ready(function () {
         }, 2000);
         setTimeout(() => {
             $('.lazy-load.done').hide();
+            $('.mail-input').val('');
         }, 3600);
     });
 });
