@@ -376,6 +376,9 @@ a:hover {
         margin-bottom: 44px;
         text-align: center;
     }
+    .header-content p{
+        margin-left: 0;
+    }
 
     .header__img--absolute {
         top: auto;
