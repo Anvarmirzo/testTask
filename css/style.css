@@ -372,6 +372,7 @@ a:hover {
 
     .header-content {
         margin-top: 0;
+        padding-left: 0;
         margin-bottom: 44px;
         text-align: center;
     }
